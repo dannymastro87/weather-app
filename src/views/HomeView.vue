@@ -33,11 +33,11 @@ export default {
       weather: null
     })
 
-    const apiKey = '81f6574e7776d515a26089460c62d399'
-    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather'
+    const apiUrl = 'http://localhost:3000/'
+
 
     const getWeather = () => {
-      axios(`${ apiUrl }?q=${ data.city }&appid=${apiKey}`).then(response => {
+      axios(`${ apiUrl }?q=${ data.city }`).then(response => {
         data.weather = response.data
       })
     }
